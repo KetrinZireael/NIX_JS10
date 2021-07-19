@@ -1,14 +1,26 @@
-function arrayName(name) {
-   const unwantedNames = ['Дима', 'Саша', 'Ольга', 'Никита'];
-   let resName = [];
+// const unwantedNames = ['Дима', 'Саша', 'Ольга', 'Никита'];
+// //let lastName = ['Никита', 'Саша', 'Анастасия', 'Дима', 'Катя', 'Лера'];
 
-   for (let i = 0; i < name.length; i++) {
-      if(unwantedNames[i] === name[i]) {
-         name.splice(i, 1);
-      }   
-   }
-   
-   return name;
+// for (let i = 0; i < unwantedNames.length; i++) {
+//     let pos = lastName.indexOf(unwantedNames[i]);
+//     if (pos != -1) {
+//         lastName.splice(pos, 1);
+//     }
+// }
+// console.log(lastName);
+
+function selectionName(lastName) {
+    const unwantedNames = ['Дима', 'Саша', 'Ольга', 'Никита'];
+    
+    for (let i = 0; i < unwantedNames.length; i++) {
+        let pos = lastName.indexOf(unwantedNames[i]);
+        if (pos != -1) {
+            lastName.splice(pos, 1);
+        }
+    }
+    console.log(lastName);
 }
 
-console.log(arrayName(['Никита', 'Саша', 'Анастасия', 'Дима', 'Катя', 'Лера']));
+selectionName(['Никита', 'Саша', 'Анастасия', 'Дима', 'Катя', 'Лера']);
+selectionName(['Алексей', 'Семён', 'Василиса', 'Дима', 'Максим', 'Ольга',]);
+selectionName(['Алишер', 'Ольга']);
